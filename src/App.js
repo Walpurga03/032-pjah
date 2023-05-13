@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Hier endsteht die neue Website von pjah
+          Hier entsteht die neue Website von pjah
         </a>
       </header>
     </div>
