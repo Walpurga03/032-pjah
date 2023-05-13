@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "../src/assets/logo/logo_1.jpg";
 import "./App.css";
 
 function App() {
@@ -6,17 +6,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Hier entsteht die neue Website von pjah
-        </a>
+
+        <h2>Hier entsteht die neue Website von pjah</h2>
       </header>
     </div>
   );
