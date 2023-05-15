@@ -1,16 +1,24 @@
-import logo from "../src/assets/logo/logo_1.jpg";
+import { Routes, Route } from "react-router-dom";
+import Navigation from "./routes/navigation/navigation";
+import Home from "./routes/home/home";
+import About from "./routes/about/about";
+import Angebot from "./routes/angebot/angebot";
+import Kunden from "./routes/kunden/kunden";
+import DigEuro from "./routes/digEuro/digEuro";
 import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
-        <h2>Hier entsteht die neue Website von pjah</h2>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Navigation />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="angebot" element={<Angebot />} />
+        <Route path="kunden" element={<Kunden />} />
+        <Route path="digEuro" element={<DigEuro />} />
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;
