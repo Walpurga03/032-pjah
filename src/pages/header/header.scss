@@ -1,0 +1,75 @@
+@use "../../components/abstracts" as *;
+
+.header {
+  height: 35rem;
+  min-height: calc(13rem + 32vw);
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  background-image: url("../../images/header_1.jpg");
+  background-size: cover;
+}
+@media (max-width: $breakpoint-lg) {
+  .header {
+    height: calc(18rem + 32vw);
+  }
+}
+
+.header__container {
+  position: relative;
+  max-width: 75rem;
+  margin: 0px auto;
+  padding: 0 2rem;
+  display: block;
+  clear: both;
+  content: "";
+}
+@media (max-width: $breakpoint-xs) {
+  .header__container {
+    padding: 0 1rem;
+  }
+}
+
+.header__heading-container {
+  clear: both;
+}
+
+.header__heading-main {
+  font-weight: 700;
+  padding-top: 5rem;
+  line-height: 92%;
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+@media (max-width: $breakpoint-md) {
+  .header__heading-main {
+    padding-top: 3rem;
+    font-size: 3rem;
+  }
+}
+@media (max-width: $breakpoint-sm) {
+  .header__heading-main {
+    padding-top: 2rem;
+    font-size: 2rem;
+  }
+}
+
+.header__heading-sub {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.25rem;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.5rem black;
+  z-index: 1;
+  position: relative;
+}
+@media (max-width: $breakpoint-sm) {
+  .header__heading-sub {
+    font-size: 1rem;
+  }
+}

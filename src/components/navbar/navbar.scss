@@ -1,0 +1,65 @@
+@use "../../components/abstracts" as *;
+
+.navigation__list-item {
+  list-style-type: none;
+  display: block;
+  float: left;
+}
+@media (max-width: $breakpoint-md) {
+  .navigation__list-item--mobile-hidden {
+    display: none;
+  }
+}
+.navigation__list-item--menu {
+  float: right;
+  font-size: 3rem;
+}
+
+.navigation__list-item-link {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.25rem 0.25rem 0.25rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: block;
+  text-shadow: 0 0 0.5rem black;
+}
+.navigation__list-item-link:hover {
+  border-bottom: 0.15rem solid $color-secondary;
+}
+.navigation__list-item--menu .navigation__list-item-link {
+  margin-top: 0.4rem;
+  margin-right: 0;
+  padding-right: 0;
+}
+.navigation__list-item--menu .navigation__list-item-link:hover {
+  border-bottom: none;
+  color: #c8c8c8;
+}
+.navigation__list-item-link--logo {
+  margin-top: 0.9rem;
+  padding-left: 0;
+  margin-left: 0;
+}
+.navigation__list-item-link--logo:hover {
+  border-bottom: none;
+  color: #c8c8c8;
+}
+
+.navigation__list-item-logo {
+  width: 4rem;
+  height: 4rem;
+  fill: currentColor;
+}
+
+.navigation_icon {
+  fill: currentColor;
+  height: 1em;
+  vertical-align: middle;
+}
+.navigation_icon:not(.icon--no-position) {
+  position: relative;
+  top: -0.075em;
+}

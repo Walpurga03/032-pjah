@@ -1,23 +1,23 @@
-import { Routes, Route } from "react-router-dom";
-import Navigation from "./routes/navigation/navigation";
-import Home from "./routes/home/home";
-import About from "./routes/about/about";
-import Angebot from "./routes/angebot/angebot";
-import Kunden from "./routes/kunden/kunden";
-import DigEuro from "./routes/digEuro/digEuro";
+import { Fragment } from "react";
+import Header from "./pages/header/header";
+import Sidebar from "./components/sidebar/sidebar";
+import Footer from "./components/footer/footer";
+
 import "./App.css";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Navigation />}>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="angebot" element={<Angebot />} />
-        <Route path="kunden" element={<Kunden />} />
-        <Route path="digEuro" element={<DigEuro />} />
-      </Route>
-    </Routes>
+    <Fragment>
+      <input
+        type="checkbox"
+        class="sidenav__opened"
+        id="sidenav__opened"
+        autocomplete="off"
+      />
+      <Header />
+      <Sidebar />
+      <Footer />
+    </Fragment>
   );
 };
 
