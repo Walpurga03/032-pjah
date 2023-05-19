@@ -11,7 +11,6 @@ const Footer = () => {
             <p class="footer__paragraph">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </p>
-
             <div class="footer__contact-item">
               <div class="footer__contact-item-icon">
                 <svg class="footer_icon" viewBox="0 0 512 512">
@@ -29,10 +28,10 @@ const Footer = () => {
               </div>
               <a
                 class="footer__contact-item-link"
-                href="mailto:contact@example.com"
+                href="mailto:consulting@pjah.de"
                 target="_blank"
               >
-                contact@example.com
+                consulting@pjah.de
               </a>
             </div>
             <div class="footer__contact-item">
@@ -59,10 +58,10 @@ const Footer = () => {
               </div>
               <a
                 class="footer__contact-item-link"
-                href="tel:+49123456789"
+                href="tel:+491708082019"
                 target="_blank"
               >
-                +49 123 456 789
+                +49-170-808-2019
               </a>
             </div>
           </div>
