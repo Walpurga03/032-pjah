@@ -10,13 +10,14 @@
   display: block;
   float: left;
 }
-@media (max-width: $breakpoint-md) {
+@media (max-width: $breakpoint-lg) {
   .navigation__list-item--mobile-hidden {
     display: none;
   }
 }
 .navigation__list-item--menu {
   float: right;
+  padding-right: 2rem;
   font-size: 3rem;
 }
 
@@ -44,8 +45,8 @@
   color: #c8c8c8;
 }
 .navigation__list-item-link--logo {
-  margin-top: 0.9rem;
-  padding-left: 0;
+  margin-top: 1.4rem;
+  padding-left: 2rem;
   margin-left: 0;
 }
 .navigation__list-item-link--logo:hover {
@@ -54,8 +55,8 @@
 }
 
 .navigation__list-item-logo {
-  width: 4rem;
-  height: 4rem;
+  width: 10rem;
+  height: 2rem;
   fill: currentColor;
 }
 

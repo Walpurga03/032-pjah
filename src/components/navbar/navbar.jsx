@@ -1,17 +1,28 @@
 import React, { Fragment } from "react";
+import Sidebar from "../../components/sidebar/sidebar";
+import Footer from "../../components/footer/footer";
+import { Outlet, Link } from "react-router-dom";
+import Logo from "../../images/logo_2.jpg";
 import "./navbar.scss";
 
 const Navbar = () => {
   return (
     <Fragment>
+      <input
+        type="checkbox"
+        class="sidenav__opened"
+        id="sidenav__opened"
+        autocomplete="off"
+      />
       <nav class="navigation">
         <ul>
           <li class="navigation__list-item">
-            <a
+            <Link
               class="navigation__list-item-link navigation__list-item-link--logo"
-              href="#"
+              to="/"
             >
-              <svg class="navigation__list-item-logo" viewBox="0 0 512 512">
+              <img src={Logo} alt="Logo" class="navigation__list-item-logo" />
+              {/* <svg class="navigation__list-item-logo" viewBox="0 0 512 512">
                 <g>
                   <path
                     d="M256.4,512C115.12,512,0.18,397.06,0.18,255.77C0.18,114.49,115.12-0.45,256.4-0.45
@@ -38,38 +49,38 @@ const Navbar = () => {
                                             c6.32,6.18,6.44,16.32,0.25,22.65c-23.91,24.45-55.91,38.12-90.11,38.5C257.34,383.81,256.85,383.81,256.37,383.81z"
                   />
                 </g>
-              </svg>
-            </a>
+              </svg> */}
+            </Link>
           </li>
           <li class="navigation__list-item navigation__list-item--mobile-hidden">
-            <a class="navigation__list-item-link" href="#">
+            <Link class="navigation__list-item-link" to="/about">
               Über uns
-            </a>
+            </Link>
           </li>
           <li class="navigation__list-item navigation__list-item--mobile-hidden">
-            <a class="navigation__list-item-link" href="#">
+            <Link class="navigation__list-item-link" to="/angebot">
               Usere Angebote
-            </a>
+            </Link>
           </li>
           <li class="navigation__list-item navigation__list-item--mobile-hidden">
-            <a class="navigation__list-item-link" href="#">
+            <Link class="navigation__list-item-link" to="kunden">
               Kunden
-            </a>
+            </Link>
           </li>
           <li class="navigation__list-item navigation__list-item--mobile-hidden">
-            <a class="navigation__list-item-link" href="#">
+            <Link class="navigation__list-item-link" to="/DigEuro">
               Digitaler Euro
-            </a>
+            </Link>
           </li>
           <li class="navigation__list-item navigation__list-item--mobile-hidden">
-            <a class="navigation__list-item-link" href="#">
+            <Link class="navigation__list-item-link" to="/bitcoin">
               Bitcoin
-            </a>
+            </Link>
           </li>
           <li class="navigation__list-item navigation__list-item--mobile-hidden">
-            <a class="navigation__list-item-link" href="#">
+            <Link class="navigation__list-item-link" to="/blockchain">
               Blockchain
-            </a>
+            </Link>
           </li>
           <li class="navigation__list-item navigation__list-item--menu">
             <label class="navigation__list-item-link" for="sidenav__opened">
@@ -98,6 +109,9 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
+      <Outlet />
+      <Sidebar />
+      <Footer />
     </Fragment>
   );
 };

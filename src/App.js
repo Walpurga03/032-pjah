@@ -1,25 +1,33 @@
 import { Fragment } from "react";
 import Navbar from "./components/navbar/navbar";
 import Header from "./pages/header/header";
-import Sidebar from "./components/sidebar/sidebar";
-import Footer from "./components/footer/footer";
+import About from "./pages/about/about";
+import Angebot from "./pages/angebot/angebot";
+import Kunden from "./pages/kunden/kunden";
+import DigEuro from "./pages/digEuro/digEuro";
+import Bitcoin from "./pages/bitcoin/bitcoin";
+import Blockchain from "./pages/blockchain/blockchain";
+
+import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
 const App = () => {
   return (
-    <Fragment>
-      <input
-        type="checkbox"
-        class="sidenav__opened"
-        id="sidenav__opened"
-        autocomplete="off"
-      />
-      <Navbar />
-      <Sidebar />
-      <Header />
-      <Footer />
-    </Fragment>
+    <Routes>
+      <Route path="/" element={<Navbar />}>
+        <Route index element={<Header />} />
+        <Route path="about" element={<About />} />
+        <Route path="angebot" element={<Angebot />} />
+        <Route path="kunden" element={<Kunden />} />
+        <Route path="digEuro" element={<DigEuro />} />
+        <Route path="bitcoin" element={<Bitcoin />} />
+        <Route path="blockchain" element={<Blockchain />} />
+      </Route>
+      {/* <Sidebar />
+
+      <Footer /> */}
+    </Routes>
   );
 };
 

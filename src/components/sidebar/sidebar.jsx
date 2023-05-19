@@ -1,50 +1,51 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 import "./sidebar.scss";
 
 const Sidebar = () => {
   return (
     <Fragment>
       <section className="sidenav">
-        <label htmlFor="sidenav__opened" className="sidenav__background" />
-        <div className="sidenav__container">
-          <label htmlFor="sidenav__opened" className="sidenav__close">
-            X
-          </label>
-          <nav>
+        <nav>
+          <label htmlFor="sidenav__opened" className="sidenav__background" />
+          <div className="sidenav__container">
+            <label htmlFor="sidenav__opened" className="sidenav__close">
+              X
+            </label>
             <ul className="sidenav__nav">
               <li>
-                <a href="#" className="sidenav__nav-link">
+                <Link to="/about" className="sidenav__nav-link">
                   Über uns
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="sidenav__nav-link">
+                <Link to="/angebot" className="sidenav__nav-link">
                   Unsere Angebote
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="sidenav__nav-link">
+                <Link to="/kunden" className="sidenav__nav-link">
                   Kunden
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="sidenav__nav-link">
+                <Link to="/digEuro" className="sidenav__nav-link">
                   Digitaler Euro
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="sidenav__nav-link">
+                <Link to="/bitcoin" className="sidenav__nav-link">
                   Bitcoin
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="sidenav__nav-link">
+                <Link to="/blockchain" className="sidenav__nav-link">
                   Blockchain
-                </a>
+                </Link>
               </li>
             </ul>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </section>
     </Fragment>
   );
