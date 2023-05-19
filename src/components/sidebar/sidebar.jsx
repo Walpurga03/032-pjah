@@ -37,6 +37,11 @@ const Sidebar = () => {
                   Bitcoin
                 </a>
               </li>
+              <li>
+                <a href="#" className="sidenav__nav-link">
+                  Blockchain
+                </a>
+              </li>
             </ul>
           </nav>
         </div>

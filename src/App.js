@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import Navbar from "./components/navbar/navbar";
 import Header from "./pages/header/header";
 import Sidebar from "./components/sidebar/sidebar";
 import Footer from "./components/footer/footer";
@@ -14,8 +15,9 @@ const App = () => {
         id="sidenav__opened"
         autocomplete="off"
       />
-      <Header />
+      <Navbar />
       <Sidebar />
+      <Header />
       <Footer />
     </Fragment>
   );

@@ -66,6 +66,11 @@ const Navbar = () => {
               Bitcoin
             </a>
           </li>
+          <li class="navigation__list-item navigation__list-item--mobile-hidden">
+            <a class="navigation__list-item-link" href="#">
+              Blockchain
+            </a>
+          </li>
           <li class="navigation__list-item navigation__list-item--menu">
             <label class="navigation__list-item-link" for="sidenav__opened">
               <svg class="navigation_icon" viewBox="0 0 512 512">

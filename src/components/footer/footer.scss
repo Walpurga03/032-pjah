@@ -1,7 +1,9 @@
 @use "../../components/abstracts" as *;
 
+@use "sass:color";
+
 .footer {
-  background-color: $color-secondary-light;
+  background-color: $color-secondary-dark;
   padding: 3rem 0 0.5rem 0;
   display: flex;
   align-items: center;
@@ -12,51 +14,30 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-bottom: 2rem;
-  border-bottom: 0.175rem solid $color-primary;
-}
-@media ($breakpoint-sm) {
-  .footer__container {
+  padding-bottom: 1rem;
+
+  @media (max-width: $breakpoint-sm) {
     flex-direction: column;
   }
 }
 
 .footer__text-column {
   flex: 0 0 auto;
-  margin-right: 5rem;
+  margin: 0 auto;
   text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
 }
-@media ($breakpoint-sm) {
-  .footer__text-column {
-    order: 2;
-    margin-right: 0rem;
-  }
-}
-
-.footer__logo-column {
-  flex: 0 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media ($breakpoint-sm) {
-  .footer__logo-column {
-    order: 1;
-    justify-content: start;
-    padding-bottom: 2rem;
-  }
-}
-
 .footer__heading {
+  padding-left: 1rem;
   color: white;
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 3.3rem;
+  font-weight: 600;
+  font-size: 3rem;
   max-width: 25rem;
   line-height: 1.1em;
 }
 
 .footer__paragraph {
+  padding-left: 1rem;
   color: $color-primary;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -64,6 +45,7 @@
 }
 
 .footer__contact-item {
+  padding-left: 1rem;
   position: relative;
   margin-bottom: 0.75rem;
 }
@@ -71,6 +53,7 @@
 .footer__contact-item-icon {
   position: relative;
   z-index: 2;
+
   background-color: $color-primary;
   height: 4rem;
   width: 4rem;
@@ -78,9 +61,10 @@
   border-radius: 100000px;
   font-size: 2.5rem;
   color: $color-secondary-light;
-}
-.footer__contact-item-icon--phone {
-  line-height: 3.9rem;
+
+  &--phone {
+    line-height: 3.9rem;
+  }
 }
 
 .footer__contact-item-link {
@@ -88,76 +72,43 @@
   z-index: 1;
   left: 2rem;
   top: 0.25rem;
+
   white-space: nowrap;
-  background-color: $color-secondary;
+  background-color: color.scale($color-secondary, $lightness: 40%);
   text-decoration: none;
-  color: $color-primary;
+  color: white;
   padding: 1rem 2rem;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   width: 16rem;
   text-align: center;
   overflow: hidden;
-}
-.footer__contact-item-link:hover {
-  color: $color-secondary;
-}
 
-.footer__contact-item-link::after {
-  content: "";
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: calc(-100% - 5rem);
+    width: calc(100% + 5rem);
+    bottom: 0;
 
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: calc(-100% - 5rem);
-  width: calc(100% + 5rem);
-  bottom: 0;
-  background-image: linear-gradient(
-    -45deg,
-    transparent 2.82rem,
-    $color-primary 2.82rem
-  );
-  background-position: right center;
-  background-repeat: no-repeat;
-  transition: transform 0.5s ease-in-out;
-  will-change: transform;
-}
-.footer__contact-item-link:hover::after {
-  transform: translate(100%, 0);
-}
-
-.footer__logo-container {
-  font-size: 18rem;
-  padding: 0.05em;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(
-    135deg,
-    $color-primary 0%,
-    $color-secondary 100%
-  );
-  border-radius: 1000000px;
-}
-@media (max-width: $breakpoint-md) {
-  .footer__logo-container {
-    font-size: 12rem;
+    background-image: linear-gradient(
+      -45deg,
+      transparent 2.82rem,
+      $color-secondary 2.82rem
+    );
+    background-position: right center;
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
   }
-}
-@media (max-width: $breakpoint-sm) {
-  .footer__logo-container {
-    font-size: 6rem;
-  }
-}
 
-.footer__logo-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.1em;
-  border: 0.025em solid white;
-  border-radius: 1000000px;
+  &:hover {
+    &::after {
+      transform: translate(100%, 0);
+    }
+  }
 }
 
 .footer__footer-list {
@@ -169,22 +120,93 @@
 
 .footer__footer-link {
   display: inline-block;
-  color: $color-primary;
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   padding: 0.5rem 1.5rem;
   white-space: nowrap;
   transition: color 0.25s ease-in-out;
-}
-.footer__footer-link:hover {
-  color: $color-secondary-dark;
-}
-@media (max-width: $breakpoint-xs) {
-  .footer__footer-link {
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  @media (max-width: $breakpoint-xs) {
     padding: 0.5rem 0.5rem;
   }
 }
+
 .footer_icon {
   fill: currentColor;
   height: 1em;
   vertical-align: middle;
+}
+
+.social-media {
+  border-bottom: 0.175rem solid $color-primary;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  a {
+    display: flex;
+    background: #fff;
+    height: 5rem;
+    width: 5rem;
+    margin: 0 1rem;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+      -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0);
+    transition: transform 0.5s;
+    @media (max-width: $breakpoint-xs) {
+      height: 3rem;
+      width: 3rem;
+    }
+    @media (max-width: $breakpoint-xxs) {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+  a i {
+    font-size: 3rem;
+    color: #777;
+    transition: transform 0.5s;
+    @media (max-width: $breakpoint-xs) {
+      font-size: 2rem;
+    }
+    @media (max-width: $breakpoint-xxs) {
+      font-size: 1.5rem;
+    }
+  }
+  a:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+      inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+      -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+      0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+      0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    transform: translate(2px);
+  }
+  a:hover i {
+    transform: scale(0.9);
+    color: #777;
+  }
+  a:hover .fa-twitter {
+    color: #1d9bf0;
+  }
+  a:hover .fa-instagram {
+    color: #f14843;
+  }
+  a:hover .fa-linkedin {
+    color: #3b5998;
+  }
+  a:hover .fa-medium {
+    color: #000000;
+  }
+  a:hover .fa-whatsapp {
+    color: #00e676;
+  }
 }

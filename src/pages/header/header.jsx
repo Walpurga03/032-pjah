@@ -1,13 +1,11 @@
 import React, { Fragment } from "react";
 import "./header.scss";
-import Navbar from "../../components/navbar/navbar";
 
 const Header = () => {
   return (
     <Fragment>
       <header className="header">
         <div className="header__container">
-          <Navbar />
           <div className="header__heading-container">
             <h1 className="header__heading-main">
               Beratung zum digitalen Euro, Bitcoin und Blockchain
