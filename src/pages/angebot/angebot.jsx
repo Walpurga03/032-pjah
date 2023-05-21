@@ -1,11 +1,8 @@
 import React, { Fragment } from "react";
+import "./angebot.scss";
 
 const Angebot = () => {
-  return (
-    <Fragment>
-      <div className="title">Unser Angebot</div>
-    </Fragment>
-  );
+  return <Fragment>Unsere Angebote</Fragment>;
 };
 
 export default Angebot;

@@ -7,6 +7,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
+    "react-clamp-lines": "^3.0.3",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
@@ -14,6 +15,7 @@
     "scss": "^0.2.4",
     "source-map-url": "^0.4.1",
     "styled-components": "^6.0.0-rc.1",
+    "typed.js": "^2.0.16",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

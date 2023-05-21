@@ -1,4 +1,7 @@
 @use "sass:color";
+@use "sass:math";
+
+$slope-incline: math.asin(0.1);
 
 $color-primary: rgb(0, 0, 0) !default;
 $color-secondary: #d1dbd2 !default;
