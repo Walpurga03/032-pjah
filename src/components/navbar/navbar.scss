@@ -1,6 +1,7 @@
 @use "../../components/abstracts" as *;
 
 .navigation {
+  min-width: 350px;
   height: 6rem;
   background-color: $color-secondary-dark;
 }
