@@ -20,7 +20,7 @@ const Sidebar = () => {
               </li>
               <li>
                 <Link to="/angebot" className="sidenav__nav-link">
-                  Unsere Angebote
+                  Angebote
                 </Link>
               </li>
               <li>

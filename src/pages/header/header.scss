@@ -1,11 +1,11 @@
 @use "../../components/abstracts" as *;
 
 .header {
+  margin-top: 5rem;
   height: 35rem;
   min-height: calc(13rem + 32vw);
   position: relative;
   overflow: hidden;
-  top: 0;
   background-image: url("../../images/header_1.jpg");
   background-size: cover;
 }
@@ -35,19 +35,20 @@
 }
 
 .header__heading-main {
+  height: 20rem;
   font-weight: 700;
   padding-top: 5rem;
   line-height: 92%;
-  font-size: 4rem;
+  font-size: 6rem;
   text-align: center;
-  color: white;
+  color: $color-secondary;
   text-transform: uppercase;
-  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 0.5rem $color-secondary-dark;
 }
 @media (max-width: $breakpoint-md) {
   .header__heading-main {
     padding-top: 3rem;
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 @media (max-width: $breakpoint-sm) {
@@ -62,14 +63,20 @@
   font-size: 1.5rem;
   letter-spacing: 0.25rem;
   text-align: center;
-  color: white;
+  color: $color-secondary;
   text-transform: uppercase;
-  text-shadow: 0 0 0.5rem black;
+  text-shadow: 0 0 0.5rem $color-secondary-dark;
   z-index: 1;
   position: relative;
 }
 @media (max-width: $breakpoint-sm) {
   .header__heading-sub {
+    margin-top: -5rem;
     font-size: 1rem;
+  }
+}
+@media (max-width: $breakpoint-xs) {
+  .header__heading-sub {
+    margin-top: -10rem;
   }
 }
