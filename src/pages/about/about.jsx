@@ -1,58 +1,57 @@
-import React from "react";
-import { useEffect, useRef } from "react";
-import Typed from "typed.js";
+import React, { Fragment } from "react";
 import ClampLines from "react-clamp-lines";
+import Bild from "./images/Philipp_1.png";
+import "./about.scss";
+
 import "./about.scss";
 
 const About = () => {
-  const text_to_clamp =
-    "Lorem ipsum dolor, sit amet consectetur adipisicing elites sapiente itaque hic. Deleniti enim earum necessitatibus quis, impedit nemo perspiciatis, laborum, ut quae minima in. Mollitia facilis eius impedit, optio commodi eveniet accusantium reiciendis laboriosam officia, dolore repellat quod quos animi accusamus voluptas? Sunt excepturi quibusdam voluptates eum tempore deleniti autem iure provident? Similique, voluptatem assumenda? Quam recusandae laudantium obcaecati odit alias aliquid quidem consequuntur doloribus, quaerat architecto nesciunt nemo minus sit ut, quis dignissimos voluptate officiis mollitia aspernatur iusto quia repellat veritatis. Quaerat ratione harum labore doloremque, beatae deleniti dolorum non asperiores debitis nulla perferendis, exercitationem molestias necessitatibus pariatur id ducimus? Quos aspernatur voluptatem accusamus fugit necessitatibus sint consectetur voluptates in minus possimus deleniti iure velit, error eligendi, saepe cum quasi ratione perspiciatis similique, qui aut! Quibusdam molestiae voluptate, beatae consequuntur libero vel nobis temporibus quo. Accusantium aliquam eveniet iste distinctio minus facilis consequuntur. Obcaecati, ipsa officiis? Pariatur corrupti nulla, animi fugit libero vel necessitatibus laudantium. Placeat harum molestiae aliquam? Dolor iusto porro amet debitis distinctio pariatur labore veritatis, quisquam eveniet tempora alias cum dolores. Doloribus explicabo cupiditate sapiente nihil corrupti veritatis illum quas atque eum provident laborum velit repudiandae aspernatur natus laudantium, distinctio voluptatum molestiae similique voluptates! Ipsa alias fuga dolores, ut similique nesciunt eaque, veritatis sit mollitia nemo asperiores animi nulla recusandae itaque dolor libero facere totam amet. Eligenfugit esse culpa aut illum.";
-  // Create Ref element.
-  const el = useRef(null);
-
-  useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: ["Winners", "Fighter", "Legend"], // Strings to display
-      // Speed settings, try diffrent values untill you get good results
-      startDelay: 150,
-      typeSpeed: 100,
-      backSpeed: 100,
-      backDelay: 300,
-      smartBackspace: true,
-      loop: true,
-      showCursor: false,
-    });
-
-    // Destropying
-    return () => {
-      typed.destroy();
-    };
-  }, []);
-
   return (
-    <>
-      <div className="header">
-        <div className="Content">
-          <h6>
-            Live Your Life As <br /> A <span ref={el}></span>
-          </h6>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
-            provident labore repellat.
-          </p>
-          <ClampLines
-            className="custom-class"
-            text={text_to_clamp}
-            id="really-unique-id"
-            lines={1}
-            ellipsis="..."
-            moreText="more"
-            lessText="less"
-            innerElement="p"
-          />
+    <Fragment>
+      <div className="about-backgroundImage">
+        <div className="about-grid">
+          <div className="about-text">
+            <h2 className="about-title">Philipp J. A. Hartmannsgruber</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Blanditiis provident labore repellat.
+            </p>
+            <ClampLines
+              className="custom-class"
+              text="Philipp J. A. Hartmannsgruber besitzt einen Master in Finance & Accounting  und einen Bachelor in Wirtschaftswissenschaften.
+
+              Er ist Vorstand beim Blockchain Bundesverband e.V. (Bundesblock).
+              
+              Als Referent für digitales Geld & digitale Assets konnte er beim Deutschen Sparkassen- und Giroverband (DSGV) seine Expertise in die Sparkassen-Finanzgruppe (SFG) einbringen. Zuvor war er Head of Corporates & Digital Markets bei der CM-Equity AG und Head of Operations des Bundesblock.
+              Im Jahr 2019 startete er das non-profit NGO ShareHope.
+              
+              Beratungserfahrungen konnte er sowohl bei PwC im Bereich Transaction Services (Financial Due Dilligence) sammeln, als auch als Senior-Consultant bei Ventum Consulting. Dort war er als Projektleiter bei MAN Truck & Bus und BMW tätig. 
+              
+              Er besitzt eine hohe Affinität zu IT-Themen sowie analytisches Denkvermögen. 
+              
+              Von Kunden wurde er als zuverlässig, vertrauensvoll, lösungsorietiert und integer charakterisiert.
+              
+              
+              
+              Er schreibt Artikel über den digitalen Euro, die Blockchain-Technologie, Bitcon sowie das Metaverse und hat einen eigenen Podcast:
+              
+              Decrypted - Blockchain und Bitcoin mit Philipp . 
+              
+              Auf Fachkonferenzen ist er zudem als Speaker und Moderator tätig. "
+              id="really-unique-id"
+              lines={2}
+              ellipsis="..."
+              moreText="more"
+              lessText="less"
+              innerElement="p"
+            />
+          </div>
+          <div className="about-picture">
+            <img src={Bild} alt="" />
+          </div>
         </div>
       </div>
-    </>
+    </Fragment>
   );
 };
 
