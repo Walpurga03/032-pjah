@@ -1,0 +1,78 @@
+@use "../../components/abstracts" as *;
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: -15rem;
+  margin-bottom: -10rem;
+  @media (max-width: $breakpoint-sm) {
+    margin-top: -15rem;
+    margin-bottom: -20rem;
+  }
+}
+.karusell-title {
+  text-align: center;
+  color: $color-secondary;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.5rem $color-secondary-dark;
+  margin-bottom: 10rem; /* Abstand nach oben anpassen */
+  @media (max-width: $breakpoint-sm) {
+    margin-bottom: 5rem;
+  }
+}
+
+.slider {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 50s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(350deg);
+  }
+}
+
+.slider span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(360px);
+  @media (max-width: $breakpoint-md) {
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(300px);
+  }
+  @media (max-width: $breakpoint-sm) {
+    width: 80%;
+    height: 80%;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(200px);
+  }
+}
+
+.slider span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: 2s;
+}
+.slider span:hover img {
+  transform: translateY(-50px) scale(1.4);
+}
+.slider:hover {
+  animation-play-state: paused;
+}

@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import Karusell from "../../components/karusell/karusell";
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import "./header.scss";
@@ -37,6 +38,7 @@ const Header = () => {
             Expertise im Umgang mit neuen Technologien, insbesondere für Banken,
             Sparkassen und Zahlungsdienstleister
           </p>
+          <Karusell />
         </div>
       </header>
     </Fragment>
