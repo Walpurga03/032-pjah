@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import Navbar from "./components/navbar/navbar";
 import Header from "./pages/header/header";
 import About from "./pages/about/about";
@@ -24,9 +23,6 @@ const App = () => {
         <Route path="bitcoin" element={<Bitcoin />} />
         <Route path="blockchain" element={<Blockchain />} />
       </Route>
-      {/* <Sidebar />
-
-      <Footer /> */}
     </Routes>
   );
 };

@@ -1,44 +1,106 @@
-.header {
+@use "../../components/abstracts" as *;
+.about-backgroundImage {
   position: relative;
-}
-.header img {
-  height: 100vh;
-  width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-.Overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: #000;
-  opacity: 0.5;
-}
-.Content {
-  position: absolute;
-  top: 50%;
-  left: 35%;
-  transform: translate(-50%, -50%);
-  color: #fff !important;
-}
-.Content h6 {
-  font-size: 80px;
-  font-weight: 900;
-}
-.Content h6 span {
-  font-size: 90px;
-  color: var(--main);
-}
-.Content p {
-  font-size: 12px;
-}
-.btn {
-  margin: 20px auto;
+  overflow: hidden;
+  height: 50rem;
 }
 
+.about-backgroundImage::before {
+  content: "";
+  background-image: url("./images/steinmauer_1.jpg");
+  filter: blur(5px);
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-size: cover;
+}
+
+.about-grid {
+  margin-top: 9rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about-title {
+  font-size: 4rem;
+}
+
+.about-picture {
+  margin: 4rem auto;
+  width: 400px;
+  height: 500px;
+}
+
+.about-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Skalierung des Bildes, um es passend einzupassen */
+}
+
+.about-text {
+  color: $color-secondary;
+  text-shadow: 0 0 0.5rem $color-secondary-dark;
+  padding-left: 2rem;
+  margin: 4rem auto;
+}
+
+h3 {
+  margin-top: 4em;
+  text-align: center;
+}
+
+.about-p {
+  font-size: 2rem;
+}
+
+/* clamp styles */
+.clamp-lines {
+  border: 1px solid $color-secondary;
+  border-radius: 0.25em;
+  font-family: sans-serif;
+  margin: 1em;
+  padding: 0.75em;
+}
+
+.clamp-lines > span {
+  display: block;
+}
+
+.clamp-lines__button {
+  background: none;
+  border: 0;
+  color: $color-secondary;
+  cursor: pointer;
+  padding: 0;
+}
+
+.clamp-lines__button:hover {
+  border-bottom: 1px solid $color-secondary-dark;
+}
+
+/* clamp custom styles */
+.clamp-lines.custom-class {
+  background: $color-secondary-dark;
+}
+
+.clamp-lines.custom-class .clamp-lines__button {
+  background: $color-secondary-light;
+  border: 1px solid transparent;
+  color: #eee;
+  display: block;
+  margin: 0.75em auto 0;
+  padding: 0.5em;
+  text-align: center;
+  transition: all 0.2s linear;
+  width: 100%;
+}
+
+.clamp-lines.custom-class .clamp-lines__button:hover {
+  background: orange;
+}
 .custom-class {
-  color: aqua;
-  font-size: 1rem;
+  text-shadow: none;
+  color: $color-secondary;
 }

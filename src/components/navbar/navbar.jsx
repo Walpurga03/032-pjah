@@ -1,10 +1,17 @@
 import React, { Fragment } from "react";
+import { useEffect } from "react";
 import Sidebar from "../../components/sidebar/sidebar";
 import Footer from "../../components/footer/footer";
 import { Outlet, Link } from "react-router-dom";
 import "./navbar.scss";
 
 const Navbar = () => {
+  useEffect(() => {
+    const inputElement = document.getElementById("usernameInput");
+    if (inputElement) {
+      inputElement.autoComplete = "off";
+    }
+  }, []);
   return (
     <Fragment>
       <input
