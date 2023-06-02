@@ -126,7 +126,7 @@
 .footer__footer-link {
   display: inline-block;
   color: $color-secondary;
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-weight: 600;
   text-decoration: none;
   padding: 0.5rem 1.5rem;
@@ -140,6 +140,11 @@
 
   @media (max-width: $breakpoint-xs) {
     padding: 0.5rem 0.5rem;
+    font-size: 1rem;
+  }
+  @media (max-width: $breakpoint-xxs) {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.6rem;
   }
 }
 
