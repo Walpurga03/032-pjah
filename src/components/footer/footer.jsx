@@ -5,13 +5,13 @@ const Footer = () => {
   return (
     <Fragment>
       <section className="footer">
-        <h4 class="footer__heading">
+        <h4 className="footer__heading">
           Kontaktieren sie mich über diese möglichkeiten
         </h4>
         <div className="footer__container">
-          <div class="footer__contact-item">
-            <div class="footer__contact-item-icon">
-              <svg class="footer_icon" viewBox="0 0 512 512">
+          <div className="footer__contact-item">
+            <div className="footer__contact-item-icon">
+              <svg className="footer_icon" viewBox="0 0 512 512">
                 <path
                   d="M432.93,176.46L278.35,76.46c-13.6-8.8-31.11-8.8-44.71,0l-154.59,100c-11.72,7.58-18.8,20.6-18.8,34.56v185.41
                                     c0,22.73,18.43,41.16,41.16,41.16h309.16c22.73,0,41.16-18.43,41.16-41.16V211.01C451.73,197.05,444.65,184.04,432.93,176.46z
@@ -25,16 +25,17 @@ const Footer = () => {
               </svg>
             </div>
             <a
-              class="footer__contact-item-link"
+              className="footer__contact-item-link"
               href="mailto:consulting@pjah.de"
               target="_blank"
+              rel="noreferrer"
             >
               consulting@pjah.de
             </a>
           </div>
-          <div class="footer__contact-item">
-            <div class="footer__contact-item-icon footer__contact-item-icon--phone">
-              <svg class="footer_icon" viewBox="0 0 512 512">
+          <div className="footer__contact-item">
+            <div className="footer__contact-item-icon footer__contact-item-icon--phone">
+              <svg className="footer_icon" viewBox="0 0 512 512">
                 <g>
                   <path
                     d="M412.93,331.8l-44.52-24c-10.84-5.84-19.27-1.62-28.6,11.23c-20.5,28.2-30.44,33.78-55.6,19.73
@@ -55,9 +56,10 @@ const Footer = () => {
               </svg>
             </div>
             <a
-              class="footer__contact-item-link"
+              className="footer__contact-item-link"
               href="tel:+491708082019"
               target="_blank"
+              rel="noreferrer"
             >
               +49-170-808-2019
             </a>
@@ -84,22 +86,12 @@ const Footer = () => {
         <footer className="footer__footer">
           <ul className="footer__footer-list">
             <li>
-              <a className="footer__footer-link" href="#">
-                License
-              </a>
+              <p className="footer__footer-link">
+                Alle Rechte vorbehalten | PJAH Consulting © 2023
+              </p>
             </li>
             <li>
-              <a className="footer__footer-link" href="#">
-                Privacy &amp; cookies
-              </a>
-            </li>
-            <li>
-              <a className="footer__footer-link" href="#">
-                Terms of use
-              </a>
-            </li>
-            <li>
-              <a className="footer__footer-link" href="#">
+              <a className="footer__footer-link" href="/">
                 Impressum
               </a>
             </li>

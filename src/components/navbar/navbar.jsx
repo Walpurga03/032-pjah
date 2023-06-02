@@ -18,7 +18,7 @@ const Navbar = () => {
         type="checkbox"
         className="sidenav__opened"
         id="sidenav__opened"
-        autocomplete="off"
+        autoComplete="off"
       />
       <nav className="navigation">
         <ul>
@@ -65,7 +65,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="navigation__list-item--menu">
-            <label for="sidenav__opened">
+            <label htmlFor="sidenav__opened">
               <svg className="navigation_icon" viewBox="0 0 512 512">
                 <g>
                   <path

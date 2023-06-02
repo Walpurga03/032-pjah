@@ -30,7 +30,10 @@ const karusell = () => {
   return (
     <Fragment>
       <div className="container">
-        <h2 className="karusell-title"> beim beraten von guten freunden</h2>
+        <h2 className="karusell-title">
+          {" "}
+          Gespräche mit bekannten Persönlichkeiten
+        </h2>
         <div className="slider">{imageElements}</div>
       </div>
     </Fragment>

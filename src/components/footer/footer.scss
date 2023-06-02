@@ -126,6 +126,7 @@
 .footer__footer-link {
   display: inline-block;
   color: $color-secondary;
+  font-size: 1.3rem;
   font-weight: 600;
   text-decoration: none;
   padding: 0.5rem 1.5rem;
@@ -134,7 +135,7 @@
   transition: color 0.25s ease-in-out;
 
   &:hover {
-    color: $color-primary;
+    color: $color-secondary-light;
   }
 
   @media (max-width: $breakpoint-xs) {
