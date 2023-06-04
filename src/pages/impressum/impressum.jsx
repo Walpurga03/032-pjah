@@ -1,8 +1,12 @@
 import React from "react";
+import { useEffect } from "react";
 import "./impressum.scss";
 import { Fragment } from "react";
 
-const impressum = () => {
+const Impressum = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Fragment>
       <h1 className="title">Impressum</h1>
@@ -426,4 +430,4 @@ const impressum = () => {
   );
 };
 
-export default impressum;
+export default Impressum;

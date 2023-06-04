@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 import "./footer.scss";
 
 const Footer = () => {
@@ -85,16 +86,12 @@ const Footer = () => {
 
         <footer className="footer__footer">
           <ul className="footer__footer-list">
-            <li>
-              <p className="footer__footer-link">
-                Alle Rechte vorbehalten | PJAH Consulting © 2023
-              </p>
-            </li>
-            <li>
-              <a className="footer__footer-link" href="/impressum">
-                Impressum
-              </a>
-            </li>
+            <p className="footer__footer-p">
+              Alle Rechte vorbehalten | PJAH Consulting © 2023
+            </p>
+            <Link className="footer__footer-link" to="/impressum">
+              Impressum
+            </Link>
           </ul>
         </footer>
       </section>
