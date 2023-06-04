@@ -51,14 +51,14 @@
   height: 100%;
   transform-origin: center;
   transform-style: preserve-3d;
-  transform: rotateY(calc(var(--i) * 45deg)) translateZ(360px);
+  transform: rotateY(calc(var(--i) * 40deg)) translateZ(360px);
   @media (max-width: $breakpoint-md) {
-    transform: rotateY(calc(var(--i) * 45deg)) translateZ(300px);
+    transform: rotateY(calc(var(--i) * 40deg)) translateZ(300px);
   }
   @media (max-width: $breakpoint-sm) {
     width: 80%;
     height: 80%;
-    transform: rotateY(calc(var(--i) * 45deg)) translateZ(200px);
+    transform: rotateY(calc(var(--i) * 40deg)) translateZ(200px);
   }
 }
 

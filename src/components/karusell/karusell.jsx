@@ -5,10 +5,11 @@ import Image1 from "./images/image_5.jpg";
 import Image2 from "./images/image_6.jpg";
 import Image3 from "./images/image_7.jpg";
 import Image4 from "./images/image_8.jpg";
-import Image5 from "./images/image_9.jpg";
+import Image5 from "./images/image_15.jpg";
 import Image6 from "./images/image_10.jpg";
 import Image7 from "./images/image_11.jpg";
 import Image8 from "./images/image_12.jpg";
+import Image9 from "./images/image_9.jpg";
 
 const karusell = () => {
   const images = [
@@ -20,6 +21,7 @@ const karusell = () => {
     Image6,
     Image7,
     Image8,
+    Image9,
   ];
 
   const imageElements = images.map((image, index) => (
