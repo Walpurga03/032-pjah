@@ -58,6 +58,11 @@
   @media (max-width: $breakpoint-sm) {
     width: 80%;
     height: 80%;
+    transform: rotateY(calc(var(--i) * 40deg)) translateZ(250px);
+  }
+  @media (max-width: $breakpoint-xs) {
+    width: 70%;
+    height: 70%;
     transform: rotateY(calc(var(--i) * 40deg)) translateZ(200px);
   }
 }
