@@ -208,6 +208,14 @@
   grid-area: imageM4;
 }
 
+.about_hyperlink {
+  color: $color-secondary-light;
+  text-decoration: none;
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
 // .about-grid {
 //   margin-top: 5rem;
 //   display: grid;
