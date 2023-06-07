@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useRef } from "react";
 import { useEffect } from "react";
 import Sidebar from "../../components/sidebar/sidebar";
 import Footer from "../../components/footer/footer";
@@ -6,12 +6,18 @@ import { Outlet, Link } from "react-router-dom";
 import "./navbar.scss";
 
 const Navbar = () => {
+  const checkboxRef = useRef(null);
   useEffect(() => {
     const inputElement = document.getElementById("usernameInput");
     if (inputElement) {
       inputElement.autoComplete = "off";
     }
   }, []);
+  const handleLinkClick = () => {
+    if (checkboxRef.current && checkboxRef.current.checked) {
+      checkboxRef.current.checked = false;
+    }
+  };
   return (
     <Fragment>
       <input
@@ -19,47 +25,76 @@ const Navbar = () => {
         className="sidenav__opened"
         id="sidenav__opened"
         autoComplete="off"
+        ref={checkboxRef}
       />
       <nav className="navigation">
         <ul>
           <li className="navigation__list-item">
-            <Link className="navigation__list-item-link" to="/">
+            <Link
+              className="navigation__list-item-link"
+              to="/"
+              onClick={handleLinkClick}
+            >
               <span>PJAH </span>
               <span>CONSULTING</span>
             </Link>
           </li>
           <li className="navigation__list-item navigation__list-item--mobile-hidden">
-            <Link className="navigation__list-item-link" to="/about">
+            <Link
+              className="navigation__list-item-link"
+              to="/about"
+              onClick={handleLinkClick}
+            >
               <span>Über </span>
               <span>uns</span>
             </Link>
           </li>
           <li className="navigation__list-item navigation__list-item--mobile-hidden">
-            <Link className="navigation__list-item-link" to="/angebot">
+            <Link
+              className="navigation__list-item-link"
+              to="/angebot"
+              onClick={handleLinkClick}
+            >
               <span>Ange</span>
               <span>bote</span>
             </Link>
           </li>
           <li className="navigation__list-item navigation__list-item--mobile-hidden">
-            <Link className="navigation__list-item-link" to="kunden">
+            <Link
+              className="navigation__list-item-link"
+              to="kunden"
+              onClick={handleLinkClick}
+            >
               <span>Kun</span>
               <span>den</span>
             </Link>
           </li>
           <li className="navigation__list-item navigation__list-item--mobile-hidden">
-            <Link className="navigation__list-item-link" to="/DigEuro">
+            <Link
+              className="navigation__list-item-link"
+              to="/DigEuro"
+              onClick={handleLinkClick}
+            >
               <span>Digitaler </span>
               <span>Euro</span>
             </Link>
           </li>
           <li className="navigation__list-item navigation__list-item--mobile-hidden">
-            <Link className="navigation__list-item-link" to="/bitcoin">
+            <Link
+              className="navigation__list-item-link"
+              to="/bitcoin"
+              onClick={handleLinkClick}
+            >
               <span>bit</span>
               <span>coin</span>
             </Link>
           </li>
           <li className="navigation__list-item navigation__list-item--mobile-hidden">
-            <Link className="navigation__list-item-link" to="/blockchain">
+            <Link
+              className="navigation__list-item-link"
+              to="/blockchain"
+              onClick={handleLinkClick}
+            >
               <span>Block</span>
               <span>chain</span>
             </Link>
@@ -92,7 +127,8 @@ const Navbar = () => {
         </ul>
       </nav>
       <Outlet />
-      <Sidebar />
+      <Sidebar checkboxRef={checkboxRef} />
+      {/* Übergebe die Checkbox-Referenz an die Sidebar */}
       <Footer />
     </Fragment>
   );
