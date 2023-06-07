@@ -33,7 +33,6 @@ const karusell = () => {
     <Fragment>
       <div className="container">
         <h2 className="karusell-title">
-          {" "}
           Gespräche mit bekannten Persönlichkeiten
         </h2>
         <div className="slider">{imageElements}</div>

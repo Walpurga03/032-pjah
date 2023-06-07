@@ -82,6 +82,7 @@ export default function App() {
 
   return (
     <>
+      <h2 className="slider-title">Gespräche mit bekannten Persönlichkeiten</h2>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}

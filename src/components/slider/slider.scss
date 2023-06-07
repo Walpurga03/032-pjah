@@ -20,8 +20,8 @@ body {
 
 .swiper {
   width: 100%;
-  padding-top: 200px;
-  padding-bottom: 50px;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .swiper-slide {
@@ -63,4 +63,15 @@ body {
 .mySwiper .swiper-pagination-bullet {
   background-color: white;
   border: 2px solid white;
+}
+
+.slider-title {
+  text-align: center;
+  color: $color-secondary;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.5rem $color-secondary-dark;
+  margin-top: 5rem;
+  @media (max-width: $breakpoint-sm) {
+    margin: 1rem 0.1rem;
+  }
 }
