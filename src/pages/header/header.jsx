@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
-import Karusell from "../../components/karusell/karusell";
+import Slider from "../../components/slider/slider";
+
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import "./header.scss";
@@ -37,7 +38,7 @@ const Header = () => {
             Expertise im Umgang mit neuen Technologien, insbesondere für Banken,
             Sparkassen und Zahlungsdienstleister
           </p>
-          <Karusell />
+          <Slider />
         </div>
       </header>
     </Fragment>
