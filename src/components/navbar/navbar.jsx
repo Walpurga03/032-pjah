@@ -42,7 +42,7 @@ const Navbar = () => {
           <li className="navigation__list-item navigation__list-item--mobile-hidden">
             <Link
               className="navigation__list-item-link"
-              to="/about"
+              to="about"
               onClick={handleLinkClick}
             >
               <span>Über </span>
@@ -52,7 +52,7 @@ const Navbar = () => {
           <li className="navigation__list-item navigation__list-item--mobile-hidden">
             <Link
               className="navigation__list-item-link"
-              to="/angebot"
+              to="angebot"
               onClick={handleLinkClick}
             >
               <span>Ange</span>

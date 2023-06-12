@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import ReadMore from "../../components/readMore/readMore";
-import { useEffect } from "react";
 
 import Bild_P from "./images/Philipp_1.png";
 import Bild_DSGV from "./images/DSGV-1920w.webp";
@@ -15,7 +14,7 @@ import Bild_BLOCKB from "./images/Blockchain-Bayern-1920w.webp";
 import "./about.scss";
 
 import "./about.scss";
-import TextAnimation from "../../components/textAnimation/textAnimation";
+
 import SmokeAnimation from "../../components/smokeAnimation/smokeAnimation";
 
 const About = () => {

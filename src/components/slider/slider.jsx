@@ -12,19 +12,19 @@ export default function App() {
     () => [
       {
         id: "1",
-        image: require("./images/Bundestag.jpg"),
+        image: require("./images/Bundestag2.jpg"),
         name: "Roundtable im Bundestag",
         role: "zur Kryptobesteuerung in Deutschland",
       },
       {
         id: "2",
-        image: require("./images/Grosskopf.jpg"),
+        image: require("./images/Grosskopf2.jpg"),
         name: "Peter Grosskopf",
         role: "Unstoppable Finance",
       },
       {
         id: "3",
-        image: require("./images/Borchardt.jpg"),
+        image: require("./images/Borchardt2.jpg"),
         name: "Pre-Event vor dem Bundestag-Roundtable",
         role: "zum digitalen Euro im Borchardt mit 30 Expert:innen",
       },
@@ -36,25 +36,25 @@ export default function App() {
       },
       {
         id: "5",
-        image: require("./images/Titus.jpg"),
+        image: require("./images/Titus2.jpg"),
         name: "Peter Meyering",
         role: "(Titus) & Friends",
       },
       {
         id: "6",
-        image: require("./images/Lindner.jpg"),
+        image: require("./images/Lindner2.jpg"),
         name: "Christian Lindner",
         role: "Finanzminister",
       },
       {
         id: "7",
-        image: require("./images/Spur.jpg"),
+        image: require("./images/Spur2.jpg"),
         name: "Kevin Spur",
         role: "Deutscher Sparkassen- und Giroverband, DSGV",
       },
       {
         id: "8",
-        image: require("./images/Pachaly.jpg"),
+        image: require("./images/Pachaly2.jpg"),
         name: "Maximilian von Wallenberg Pachaly",
         role: "Unstoppable Finance",
       },
@@ -66,7 +66,7 @@ export default function App() {
       },
       {
         id: "10",
-        image: require("./images/Schleiffring.jpg"),
+        image: require("./images/Schleiffring2.jpg"),
         name: "Karsten Schleiffring",
         role: "Gesellschaft für Sparkassendienstleistungen, GSD",
       },

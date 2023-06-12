@@ -17,9 +17,9 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Navbar />}>
         <Route index element={<Header />} />
-        <Route path="about" element={<About />} />
-        <Route path="angebot" element={<Angebot />} />
-        <Route path="kunden" element={<Kunden />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/angebot" element={<Angebot />} />
+        <Route path="/kunden" element={<Kunden />} />
         <Route path="digEuro" element={<DigEuro />} />
         <Route path="bitcoin" element={<Bitcoin />} />
         <Route path="blockchain" element={<Blockchain />} />

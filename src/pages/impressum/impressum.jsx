@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
 import "./impressum.scss";
 import { Fragment } from "react";
 
