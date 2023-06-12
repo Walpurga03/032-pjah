@@ -1,0 +1,18 @@
+@use "../../components/abstracts" as *;
+
+.readMore-long-text {
+  max-height: 0;
+  overflow: hidden;
+  display: inline-block;
+  transition: max-height 0.5s;
+}
+.expanded {
+  max-height: 100rem;
+  transition: max-height 2s;
+}
+.readMore_button {
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0.5rem;
+  color: $color-secondary-dark;
+}

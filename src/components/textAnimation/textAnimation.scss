@@ -1,0 +1,40 @@
+@use "../../components/abstracts" as *;
+
+.textanimation-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textanimation-h2 {
+  position: relative;
+  font-size: 5rem;
+  color: $color-secondary;
+  -webkit-text-stroke: 0.3vw $color-secondary;
+  text-transform: uppercase;
+}
+.textanimation-h2::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  color: $color-primary;
+  -webkit-text-stroke: 0vw $color-secondary-dark;
+  border-right: 5px solid $color-primary;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}

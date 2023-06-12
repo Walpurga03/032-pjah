@@ -84,6 +84,7 @@ export default function App() {
     <>
       <h2 className="slider-title">Gespräche mit bekannten Persönlichkeiten</h2>
       <Swiper
+        spaceBetween={30}
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
@@ -95,7 +96,9 @@ export default function App() {
           modifier: 1,
           slideShadows: true,
         }}
-        pagination={true}
+        pagination={{
+          clickable: true,
+        }}
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >
