@@ -7,7 +7,7 @@ const SmokeAnimation = () => {
   return (
     <Fragment>
       <div className="smokeAnimation-body">
-        <video src={Video} autoPlay muted></video>
+        <video src={Video} autoPlay muted preload="auto"></video>
         <h1 className="smokeAnimation-h1">
           <span>Ü</span>
           <span>B</span>

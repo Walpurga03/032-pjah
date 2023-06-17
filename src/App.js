@@ -7,8 +7,7 @@ import DigEuro from "./pages/digEuro/digEuro";
 import Bitcoin from "./pages/bitcoin/bitcoin";
 import Blockchain from "./pages/blockchain/blockchain";
 import Impressum from "./pages/impressum/impressum";
-
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import "./App.css";
 
@@ -24,6 +23,7 @@ const App = () => {
         <Route path="bitcoin" element={<Bitcoin />} />
         <Route path="blockchain" element={<Blockchain />} />
         <Route path="impressum" element={<Impressum />} />
+        <Route path="/*" element={<Navigate to="/" />} />
       </Route>
     </Routes>
   );

@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import ReadMore from "../../components/readMore/readMore";
-
 import Bild_P from "./images/Philipp_1.png";
 import Bild_DSGV from "./images/DSGV-1920w.webp";
 import Bild_DEA from "./images/Digital+Euro+Association.webp";
@@ -118,7 +117,6 @@ const About = () => {
           <ReadMore
             shortText={
               <p className="about_text">
-                {" "}
                 Seit Beginn des EZB-Projekts zum digitalen Euro begleitet
                 <a
                   className="about_hyperlink"
