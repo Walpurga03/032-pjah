@@ -1,4 +1,51 @@
-.title {
-  height: 35rem;
-  color: orange;
+.bitcoin-container {
+  margin-top: 6rem;
+}
+.bitcoin-layout {
+  display: grid;
+  grid-template-columns: [start] 1fr [left] 1fr [middle] 1fr [right]1fr[end];
+  grid-template-areas:
+    ". a a . ."
+    ". b b . ."
+    ". c c . ."
+    ". d d . ."
+    ". e e . ."
+    ". f f . .";
+  column-gap: 1rem;
+  row-gap: 1rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.bitcoin-card {
+  width: 90vw;
+  padding: 0.5rem 1rem;
+}
+
+.bitcoin-card--a {
+  grid-area: a;
+}
+
+.bitcoin-card--b {
+  grid-area: b;
+}
+
+.bitcoin-card--c {
+  grid-area: c;
+}
+
+.bitcoin-card--d {
+  grid-area: d;
+}
+
+.bitcoin-card--e {
+  grid-area: e;
+}
+.bitcoin-card--f {
+  grid-area: f;
+}
+
+.bitcoin-card__heading {
+  text-align: center;
+  font-size: 2rem;
 }
