@@ -1,10 +1,11 @@
 import React from "react";
+import styled, { keyframes } from "styled-components";
 
 const content_e = () => {
   return (
     <div>
-      <h2>Bitcoin - Das Anlageinstrument und die Zukunftswährung?</h2>
-      <p>
+      <Heading>Bitcoin - Das Anlageinstrument und die Zukunftswährung?</Heading>
+      <Text>
         Bitcoin hat sich als eine bahnbrechende digitale Währung etabliert, die
         die Finanzwelt und die Art und Weise, wie wir Werte speichern und
         Transaktionen durchführen, verändert hat. Als Zahlungsmittel bietet es
@@ -23,9 +24,32 @@ const content_e = () => {
         der Bitcoin-Markt und seine Position in der globalen Wirtschaft in den
         kommenden Jahren weiterentwickeln werden. Ich für meinen Teil bin
         optimistisch.
-      </p>
+      </Text>
     </div>
   );
 };
 
 export default content_e;
+
+const Heading = styled.h2`
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  font-size: 2rem;
+`;
+
+const Text = styled.p`
+  max-width: 800px;
+  margin: 0 auto;
+  color: #000;
+  font-size: 1.2rem;
+  column-count: 1;
+  column-gap: 4rem;
+  column-rule: 0.125rem solid rgba(203, 200, 200, 0.8);
+  text-shadow: 0 0 0.5 #000;
+  text-align: justify;
+`;

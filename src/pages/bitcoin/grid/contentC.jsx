@@ -1,9 +1,10 @@
-import React from "react";
+import React, { Fragment } from "react";
+import styled, { keyframes } from "styled-components";
 
 const content_c = () => {
   return (
-    <div>
-      <p>
+    <Fragment>
+      <Text>
         In der sich stets wandelnden Welt der digitalen Vermögenswerte hat sich
         Bitcoin als wahrer Vorreiter etabliert und die Vorstellungskraft von
         Investoren, Technologen und Finanzexperten gleichermaßen fasziniert.
@@ -15,9 +16,21 @@ const content_c = () => {
         Bitcoin als Zahlungsmittel, Wertspeicher und Recheneinheit vertiefen und
         seine Knappheit als treibende Kraft hinter seiner Begehrlichkeit und dem
         Potenzial für langfristige Preiserhöhungen herausstellen.
-      </p>
-    </div>
+      </Text>
+    </Fragment>
   );
 };
 
 export default content_c;
+
+const Text = styled.p`
+  max-width: 800px;
+  margin: 0 auto;
+  color: #000;
+  font-size: 1.2rem;
+  column-count: 2;
+  column-gap: 4rem;
+  column-rule: 0.125rem solid rgba(203, 200, 200, 0.8);
+  text-shadow: 0 0 0.5 #000;
+  text-align: justify;
+`;

@@ -8,6 +8,9 @@ import ContentE from "./grid/contentE";
 import ContentF from "./grid/contentF";
 
 const Bitcoin = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Fragment>
       <div class="bitcoin-container">
