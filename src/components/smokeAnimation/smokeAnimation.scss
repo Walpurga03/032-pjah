@@ -40,6 +40,7 @@ video {
   opacity: 0;
   display: inline-block;
   animation: animate 1s linear forwards;
+  animation-duration: 1s;
 }
 @keyframes animate {
   0% {
@@ -55,26 +56,26 @@ video {
 }
 
 .smokeAnimation-h1 span:nth-child(1) {
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .smokeAnimation-h1 span:nth-child(2) {
-  animation-delay: 2.5s;
+  animation-delay: 1.5s;
 }
 .smokeAnimation-h1 span:nth-child(3) {
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 .smokeAnimation-h1 span:nth-child(4) {
-  animation-delay: 3.5s;
+  animation-delay: 2.5s;
 }
 .smokeAnimation-h1 span:nth-child(5) {
-  animation-delay: 4s;
+  animation-delay: 3s;
 }
 .smokeAnimation-h1 span:nth-child(6) {
-  animation-delay: 4.5s;
+  animation-delay: 3s;
 }
 .smokeAnimation-h1 span:nth-child(7) {
-  animation-delay: 5s;
+  animation-delay: 3s;
 }
 .smokeAnimation-h1 span:nth-child(8) {
-  animation-delay: 5.5s;
+  animation-delay: 3s;
 }

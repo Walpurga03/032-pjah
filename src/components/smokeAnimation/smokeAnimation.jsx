@@ -1,44 +1,50 @@
-import React, { useRef, useEffect } from "react";
 import "./smokeAnimation.scss";
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
 import Video from "../smokeAnimation/smoke.mp4";
 
 const SmokeAnimation = () => {
-  const videoRef = useRef(null);
-
+  const [videoLoaded, setVideoLoaded] = useState(false);
   useEffect(() => {
-    const videoElement = videoRef.current;
-    const animationSpans = document.querySelectorAll(".smokeAnimation-h1 span");
+    const videoElement = document.getElementById("smokeVideo");
 
-    const startAnimation = () => {
-      setTimeout(() => {
-        animationSpans.forEach((span, index) => {
-          span.style.animationDelay = `${index * 0.5}s`;
-        });
-      }, 500); // Startverzögerung von 2 Sekunden
+    const handleVideoLoad = () => {
+      setVideoLoaded(true);
     };
-
-    videoElement.addEventListener("play", startAnimation);
+    videoElement.addEventListener("canplaythrough", handleVideoLoad);
 
     return () => {
-      videoElement.removeEventListener("play", startAnimation);
+      videoElement.removeEventListener("canplaythrough", handleVideoLoad);
     };
   }, []);
 
   return (
     <Fragment>
-      <div className="smokeAnimation-body">
-        <video ref={videoRef} src={Video} autoPlay muted preload="auto"></video>
-        <h1 className="smokeAnimation-h1">
-          <span>Ü</span>
-          <span>B</span>
-          <span>E</span>
-          <span>R</span>
-          <span>&nbsp;</span>
-          <span>U</span>
-          <span>N</span>
-          <span>S</span>
-        </h1>
+      <div
+        className="smokeAnimation-body"
+        style={{ background: videoLoaded ? "transparent" : "black" }}
+      >
+        {!videoLoaded && <div>Loading...</div>}
+        <video
+          id="smokeVideo"
+          src={Video}
+          autoPlay
+          muted
+          preload="auto"
+          style={{ display: videoLoaded ? "block" : "none" }}
+          onLoadedData={() => setVideoLoaded(true)}
+        ></video>
+        {videoLoaded && (
+          <h1 className="smokeAnimation-h1">
+            <span>Ü</span>
+            <span>B</span>
+            <span>E</span>
+            <span>R</span>
+            <span>&nbsp;</span>
+            <span>U</span>
+            <span>N</span>
+            <span>S</span>
+          </h1>
+        )}
       </div>
     </Fragment>
   );
