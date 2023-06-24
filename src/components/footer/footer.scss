@@ -3,7 +3,8 @@
 @use "sass:color";
 
 .footer {
-  background-image: url("../../images/wood2.jpg");
+  background-color: $color-primary;
+  //background-image: url("../../images/wood2.jpg");
   padding: 3rem 0 0.5rem 0;
   width: 100%;
   display: flex;
@@ -22,7 +23,6 @@
   font-size: 3rem;
   max-width: 70%;
   line-height: 1.1em;
-  text-shadow: 0 0 1rem $color-primary;
   @media (max-width: $breakpoint-sm) {
     font-size: 2rem;
   }
@@ -59,15 +59,17 @@
 .footer__contact-item-icon {
   position: relative;
   z-index: 2;
-
-  background-color: $color-primary;
+  background-color: $color-secondary;
   height: 4rem;
   width: 4rem;
   text-align: center;
   border-radius: 100000px;
   font-size: 2.5rem;
-  color: $color-secondary;
+  color: $color-primary;
 
+  &--mail {
+    line-height: 3.3rem;
+  }
   &--phone {
     line-height: 3.7rem;
   }
@@ -77,7 +79,7 @@
   position: absolute;
   z-index: 1;
   left: 2rem;
-  top: 0.25rem;
+  top: 0.5rem;
 
   white-space: nowrap;
   background-color: $color-primary;

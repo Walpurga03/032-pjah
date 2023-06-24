@@ -9,7 +9,7 @@
   height: 3.5rem;
   z-index: 11111111111;
   height: 5rem;
-  background-image: url("../../images/wood2.jpg");
+  // background-image: url("../../images/wood2.jpg");
 }
 
 .navigation__list-item {
@@ -31,7 +31,8 @@
   margin-top: 1rem;
   margin-left: 1.5rem;
   display: block;
-  border: 0.2rem solid $color-primary;
+  border-radius: 3px;
+  border: 0.2rem solid $color-secondary;
   font-size: 1rem;
   font-weight: 550;
   padding: 0.6rem 0.2rem 0.6rem 0.2rem;
@@ -50,12 +51,12 @@
 }
 .navigation__list-item-link:hover {
   & span:first-child {
-    background-color: white;
+    background-color: $color-secondary;
     color: $color-primary;
   }
   & span:last-child {
     background-color: $color-primary;
-    color: white;
+    color: $color-secondary;
   }
 }
 
@@ -89,7 +90,8 @@
 }
 
 .navigation_icon {
-  fill: $color-primary;
+  cursor: pointer;
+  fill: $color-secondary;
   height: 1em;
   vertical-align: middle;
   stroke-width: 20px !important;

@@ -11,7 +11,7 @@ const Footer = () => {
         </h4>
         <div className="footer__container">
           <div className="footer__contact-item">
-            <div className="footer__contact-item-icon">
+            <div className="footer__contact-item-icon footer__contact-item-icon--mail">
               <svg className="footer_icon" viewBox="0 0 512 512">
                 <path
                   d="M432.93,176.46L278.35,76.46c-13.6-8.8-31.11-8.8-44.71,0l-154.59,100c-11.72,7.58-18.8,20.6-18.8,34.56v185.41
