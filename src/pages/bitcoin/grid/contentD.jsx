@@ -1,6 +1,13 @@
 import React, { Fragment, useState, useEffect, useRef } from "react";
-import styled, { keyframes } from "styled-components";
-import Bild from "../images/bitcoin_7.jpg";
+import styled from "styled-components";
+import Bild1 from "../images/bitcoin_7.jpg";
+import {
+  bp_MD,
+  bp_XS,
+  bp_XXS,
+  col_P,
+  col_S_D,
+} from "../../../components/abstracts/variables";
 
 const ContentD = () => {
   const [animateText, setAnimateText] = useState(false);
@@ -15,8 +22,8 @@ const ContentD = () => {
     const handleScroll = () => {
       const headingElement = headingRef.current;
       if (headingElement) {
-        const { top, bottom } = headingElement.getBoundingClientRect();
-        const isVisible = top >= 0 && bottom <= window.innerHeight;
+        const { bottom } = headingElement.getBoundingClientRect();
+        const isVisible = bottom <= window.innerHeight;
         setAnimateText(isVisible);
         setAnimateImage(isVisible);
       }
@@ -30,11 +37,13 @@ const ContentD = () => {
     <Fragment>
       <AnimationText animate={animateText}>
         <Heading ref={headingRef} id="startAnimation">
-          Bitcoin - Die Entstehung
+          Bitcoin
+          <br />
+          Die Entstehung
         </Heading>
       </AnimationText>
       <AnimationImage animate={animateImage}>
-        <AnimatedImage src={Bild} alt="Bitcoin-Bild" />
+        <StyledAnimatedImage src={Bild1} alt="Bitcoin-Bild" />
       </AnimationImage>
       <Text>
         Im Herzen von Bitcoin liegt das bahnbrechende Bitcoin-Whitepaper, das am
@@ -54,6 +63,7 @@ const ContentD = () => {
 export default ContentD;
 
 const AnimationImage = styled.div`
+  margin: 2rem;
   opacity: 0;
   transform: scale(0.1);
   transition: opacity 1s, transform 1s;
@@ -65,42 +75,60 @@ const AnimationImage = styled.div`
   `}
 `;
 const AnimationText = styled.div`
-  transform: translateY(300%);
-  transition: transform 1s;
-  ${({ animate }) =>
-    animate &&
-    `
+  @media (min-width: ${bp_XXS}) {
+    transform: translateY(200%);
+    transition: transform 1s;
+    ${({ animate }) =>
+      animate &&
+      `
     transform: translateY(0%);
   `}
+  }
 `;
 
 const Heading = styled.h2`
-  color: #000;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-align: center;
-  padding-top: 4rem;
-  padding-bottom: 2rem;
-  font-size: 2rem;
+  @media (min-width: ${bp_XXS}) {
+    color: ${col_P};
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  @media (min-width: ${bp_XS}) {
+    font-size: 2.5rem;
+  }
+  @media (min-width: ${bp_MD}) {
+    font-size: 3.5rem;
+  }
 `;
 
-const AnimatedImage = styled.img`
-  border-radius: 100%;
+const StyledAnimatedImage = styled.img`
+  max-width: 500px;
+  width: 100%;
   display: block;
-  margin: 0 auto;
-  max-width: 400px;
-  padding-bottom: 2rem;
+  margin: 0 auto 1rem;
+  border-radius: 1rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
 `;
 
 const Text = styled.p`
-  max-width: 800px;
-  margin: 0 auto;
-  color: #000;
-  font-size: 1.2rem;
-  column-count: 1;
-  column-gap: 4rem;
-  column-rule: 0.125rem solid rgba(203, 200, 200, 0.8);
-  text-shadow: 0 0 0.5 #000;
-  text-align: justify;
+  @media (min-width: ${bp_XXS}) {
+    margin: 0 auto;
+    color: ${col_P};
+    font-size: 1.2rem;
+    column-count: 1;
+    column-gap: 4rem;
+    column-rule: 0.125rem solid ${col_S_D};
+    text-shadow: 0 0 0.5 ${col_P};
+    text-align: justify;
+  }
+  @media (min-width: ${bp_XS}) {
+    column-count: 2;
+  }
+  @media (min-width: ${bp_MD}) {
+    font-size: 1.5rem;
+  }
 `;

@@ -8,7 +8,6 @@ import Bitcoin from "./pages/bitcoin/bitcoin";
 import Blockchain from "./pages/blockchain/blockchain";
 import Impressum from "./pages/impressum/impressum";
 import { Routes, Route, Navigate } from "react-router-dom";
-
 import "./App.css";
 
 const App = () => {

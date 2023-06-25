@@ -1,6 +1,15 @@
 import React, { Fragment } from "react";
 import styled, { keyframes } from "styled-components";
 import backgroundImage from "../images/bicoin_1.png";
+import {
+  bp_LG,
+  bp_MD,
+  bp_SM,
+  bp_XS,
+  bp_XXS,
+  col_P,
+  col_S,
+} from "../../../components/abstracts/variables";
 
 const content_a = () => {
   return (
@@ -19,6 +28,36 @@ const content_a = () => {
 
 export default content_a;
 
+const Background = styled.div`
+  @media (min-width: ${bp_XXS}) {
+    margin: 0 auto;
+    width: 100%;
+    height: 50vh;
+    background-image: url(${backgroundImage});
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (min-width: ${bp_XS}) {
+    height: 70vh;
+  }
+  @media (min-width: ${bp_SM}) {
+    height: 100vh;
+    width: 90%;
+  }
+  @media (min-width: ${bp_MD}) {
+    height: 100vh;
+    width: 80%;
+  }
+  @media (min-width: ${bp_LG}) {
+    height: 100vh;
+    width: 800px;
+  }
+`;
+
 const slideUpAnimation = keyframes`
   0% {
     transform: translateY(300%);
@@ -28,18 +67,6 @@ const slideUpAnimation = keyframes`
     transform: translateY(0);
     opacity: 1;
   }
-`;
-
-const Background = styled.div`
-  width: 100%;
-  height: 700px;
-  background-image: url(${backgroundImage});
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 const AnimationContainer = styled.div`
@@ -58,12 +85,18 @@ const ContentWrapper = styled.div`
 const Heading = styled.div`
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #fff;
-  text-shadow: 1px 1px 2px #fff, 0 0 1em #000, 0 0 0.2em #000;
+  color: ${col_S};
+  text-shadow: 1px 1px 2px ${col_P}, 0 0 1em ${col_P}, 0 0 0.2em #000;
+  @media (min-width: ${bp_SM}) {
+    font-size: 5rem;
+  }
 `;
 
 const SubHeading = styled.div`
   font-size: 2.5rem;
-  color: #fff;
-  text-shadow: 1px 1px 2px #fff, 0 0 1em #000, 0 0 0.2em #000;
+  color: ${col_S};
+  text-shadow: 1px 1px 2px ${col_S}, 0 0 1em ${col_P}, 0 0 0.2em #000;
+  @media (min-width: ${bp_SM}) {
+    font-size: 4rem;
+  }
 `;
