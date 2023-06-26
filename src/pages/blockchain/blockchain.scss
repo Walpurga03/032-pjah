@@ -1,4 +1,47 @@
-.title {
-  height: 35rem;
-  color: rgb(0, 47, 255);
+.blockchain-container {
+  margin-top: 6rem;
+}
+.blockchain-layout {
+  display: grid;
+  grid-template-columns: [start] 1fr [left] 1fr [middle] 1fr [right]1fr[end];
+  grid-template-areas:
+    ". a a . ."
+    ". b b . ."
+    ". c c . ."
+    ". d d . ."
+    ". e e . .";
+  column-gap: 1rem;
+  row-gap: 1rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.blockchain-card {
+  width: 90vw;
+  padding: 0.5rem 1rem;
+}
+
+.blockchain-card--a {
+  grid-area: a;
+}
+
+.blockchain-card--b {
+  grid-area: b;
+}
+
+.blockchain-card--c {
+  grid-area: c;
+}
+
+.blockchain-card--d {
+  grid-area: d;
+}
+
+.blockchain-card--e {
+  grid-area: e;
+}
+
+.blockchain-card__heading {
+  text-align: center;
+  font-size: 2rem;
 }
