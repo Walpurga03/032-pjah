@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect, useRef } from "react";
 import styled from "styled-components";
-import Bild from "../images/blockchain_4.jpg";
+import Bild from "../images/digEuro_2.jpg";
 import {
   bp_MD,
   bp_XXS,
@@ -36,20 +36,19 @@ const ContentD = () => {
     <Fragment>
       <AnimationText animate={animateText}>
         <Heading ref={headingRef} id="startAnimation">
-          Philipp J.A. Hartmannsgruber <br /> über die Blockchain-Technologie
+          Philipp J.A. Hartmannsgruber <br /> über den digitalen Euro
         </Heading>
       </AnimationText>
       <AnimationImage animate={animateImage}>
         <StyledAnimatedImage src={Bild} alt="Bitcoin-Bild" />
       </AnimationImage>
       <Text>
-        Die Vorteile der permissionless-Blockchain-Technologie sind umfangreich
-        und gehen über die Behauptungen von Langsamkeit und Ineffizienz hinaus,
-        die von Bitcoin-Maximalisten gemacht werden. Permissionless-Blockchains
-        bieten Dezentralisierung, Sicherheit, Transparenz, Geschwindigkeit und
-        globale Zugänglichkeit, was sie zu einer idealen Technologie für die
-        Abwicklung von Bitcoin- und traditionellen Finanzwerte-Transaktionen
-        macht.
+        “Die digitale Zentralbankform des Euro muss für europäische Bürgerinnen
+        und Bürger (Retail CBDC) sowie Unternehmen und Banken (Wholesale CBDC)
+        Mehrwerte bieten. Dies kann er nur, wenn er als tokenisiertes
+        Inhaberinstrument ausgestaltet und programmierbar ist sowie die Vorteile
+        der Blockchain-Technologie nutzt. Zudem muss für eine gesteigerte
+        Privatsphäre eine Offline-Funktionalität ermöglicht werden.”
       </Text>
     </Fragment>
   );

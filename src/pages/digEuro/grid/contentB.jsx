@@ -17,21 +17,31 @@ const content_b = () => {
       <BlockquoteAnimation>
         <Blockquote>
           <Quote>
-            Die Blockchain-Technologie ist durch kryptografische Algorithmen die
-            Grundlage für Transparenz, Sicherheit und Unveränderlichkeit bei
-            Bitcoin.
+            Der digitale Euro sollte die Vorteile der Blockchain-Technologie
+            nutzen.
           </Quote>
-          <Author>Philipp J.A. Hartmannsgruber</Author>
+          <Author>Blockchain Bundesverband e.V. (Bundesblock).</Author>
         </Blockquote>
       </BlockquoteAnimation>
       <LinkContainerAnimation>
         <LinkContainer>
           <Link
-            href="https://medium.com/pjah-consulting/warum-bitcoin-maximalisten-sich-irren-die-blockchain-technologie-abzulehnen-de02d593fc59"
+            href="https://cdn.website-editor.net/s/fd1ec16dcc8d4aedb14bdb0bcf47e163/files/uploaded/Bundesblock%2520Positionspapier%2520Digitaler%2520Euro.pdf?Expires=1689435646&Signature=qfDzYu2Rv1EoVrMNFZZikli2F2AXnhuJFCtVMpbxEpl8zbmhyhwrSX4vwy5D7dFDcHcs7Y1q6XEPXoaKdNpS1aEzVanvMp-0L4apCZfRUm0fT5nRNgaGl6PHfHrTG1ycn5fFTHSrl~ehlRZDEK7gu9N4w2508YUcTodAmx3RPTno6cPx5x0-4~Tk5OYZYTOVmHBMdvK1WM0qdjEYEEns0MChfTPTi6WvPtSn5WodFk0DBpJdz8IWiPHk2pSqtxoovuFqVWAiBMbDSIMThD~QT5w~a-FYn7yjcjqwbJEynoQ2JwAedhgJe9TYpYmpN2WTBcLF7aC19Th5zkWRbdzrHA__&Key-Pair-Id=K2NXBXLF010TJW"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <p>Vorteile der Blockchain-Technologie</p>
+            <p>Digitaler Euro Positionspapier - Bundesblock (download)</p>
+          </Link>
+        </LinkContainer>
+      </LinkContainerAnimation>
+      <LinkContainerAnimation>
+        <LinkContainer>
+          <Link
+            href="https://cdn.website-editor.net/s/fd1ec16dcc8d4aedb14bdb0bcf47e163/files/uploaded/Bundesblock%2520Positionspapier%2520Digitaler%2520Euro.pdf?Expires=1689435646&Signature=qfDzYu2Rv1EoVrMNFZZikli2F2AXnhuJFCtVMpbxEpl8zbmhyhwrSX4vwy5D7dFDcHcs7Y1q6XEPXoaKdNpS1aEzVanvMp-0L4apCZfRUm0fT5nRNgaGl6PHfHrTG1ycn5fFTHSrl~ehlRZDEK7gu9N4w2508YUcTodAmx3RPTno6cPx5x0-4~Tk5OYZYTOVmHBMdvK1WM0qdjEYEEns0MChfTPTi6WvPtSn5WodFk0DBpJdz8IWiPHk2pSqtxoovuFqVWAiBMbDSIMThD~QT5w~a-FYn7yjcjqwbJEynoQ2JwAedhgJe9TYpYmpN2WTBcLF7aC19Th5zkWRbdzrHA__&Key-Pair-Id=K2NXBXLF010TJW"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p>English Summary on Medium</p>
             <i className="fab fa-medium"></i>
           </Link>
         </LinkContainer>

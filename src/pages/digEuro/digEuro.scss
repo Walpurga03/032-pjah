@@ -1,4 +1,47 @@
-.title {
-  height: 35rem;
-  color: rgb(162, 0, 255);
+.digEuro-container {
+  margin-top: 6rem;
+}
+.digEuro-layout {
+  display: grid;
+  grid-template-columns: [start] 1fr [left] 1fr [middle] 1fr [right]1fr[end];
+  grid-template-areas:
+    ". a a . ."
+    ". b b . ."
+    ". c c . ."
+    ". d d . ."
+    ". e e . .";
+  column-gap: 1rem;
+  row-gap: 1rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.digEuro-card {
+  width: 90vw;
+  padding: 0.5rem 1rem;
+}
+
+.digEuro-card--a {
+  grid-area: a;
+}
+
+.digEuro-card--b {
+  grid-area: b;
+}
+
+.digEuro-card--c {
+  grid-area: c;
+}
+
+.digEuro-card--d {
+  grid-area: d;
+}
+
+.digEuro-card--e {
+  grid-area: e;
+}
+
+.digEuro-card__heading {
+  text-align: center;
+  font-size: 2rem;
 }
