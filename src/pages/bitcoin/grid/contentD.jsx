@@ -116,6 +116,7 @@ const StyledAnimatedImage = styled.img`
 
 const Text = styled.p`
   @media (min-width: ${bp_XXS}) {
+    max-width: 800px;
     margin: 0 auto;
     color: ${col_P};
     font-size: 1.2rem;
