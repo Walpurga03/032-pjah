@@ -81,16 +81,14 @@ const AnimationText = styled.div`
 `;
 
 const Heading = styled.h2`
-  @media (min-width: ${bp_XXS}) {
-    color: ${col_P};
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-size: 1.5rem;
-  }
+  color: ${col_P};
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
 `;
 
 const StyledAnimatedImage = styled.img`
@@ -102,18 +100,16 @@ const StyledAnimatedImage = styled.img`
 `;
 
 const Text = styled.p`
-  @media (min-width: ${bp_XXS}) {
-    max-width: 800px;
-    margin: 0 auto;
-    color: ${col_P};
-    font-size: 1.2rem;
-    column-count: 1;
-    column-gap: 4rem;
-    column-rule: 0.125rem solid ${col_S_D};
-    text-shadow: 0 0 0.5 ${col_P};
-    text-align: justify;
-    margin-bottom: 2rem;
-  }
+  max-width: 800px;
+  margin: 0 auto;
+  color: ${col_P};
+  font-size: 1.2rem;
+  column-count: 1;
+  column-gap: 4rem;
+  column-rule: 0.125rem solid ${col_S_D};
+  text-shadow: 0 0 0.5 ${col_P};
+  text-align: justify;
+  margin-bottom: 2rem;
 
   @media (min-width: ${bp_MD}) {
     font-size: 1.5rem;

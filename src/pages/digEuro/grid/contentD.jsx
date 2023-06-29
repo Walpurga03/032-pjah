@@ -3,7 +3,6 @@ import styled from "styled-components";
 import {
   bp_MD,
   bp_XS,
-  bp_XXS,
   col_P,
   col_S,
   col_S_D,
@@ -74,18 +73,16 @@ const SubHeading = styled.h2`
 `;
 
 const Text = styled.p`
-  @media (min-width: ${bp_XXS}) {
-    max-width: 800px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: ${col_P};
+  font-size: 1.2rem;
+  column-count: 1;
+  column-gap: 4rem;
+  column-rule: 0.125rem solid ${col_S_D};
+  text-shadow: 0 0 0.5 ${col_P};
+  text-align: justify;
 
-    margin: 0 auto;
-    color: ${col_P};
-    font-size: 1.2rem;
-    column-count: 1;
-    column-gap: 4rem;
-    column-rule: 0.125rem solid ${col_S_D};
-    text-shadow: 0 0 0.5 ${col_P};
-    text-align: justify;
-  }
   @media (min-width: ${bp_XS}) {
     column-count: 2;
   }

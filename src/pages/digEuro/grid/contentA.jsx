@@ -29,18 +29,17 @@ const content_a = () => {
 export default content_a;
 
 const Background = styled.div`
-  @media (min-width: ${bp_XXS}) {
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    background-image: url(${backgroundImage});
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  margin: 0 auto;
+  width: 100%;
+  height: 35vh;
+  background-image: url(${backgroundImage});
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   @media (min-width: ${bp_XS}) {
     height: 50vh;
   }
